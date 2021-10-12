@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div>
+    <form method="POST" action="/processtext/" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="textrecog">
+            <p>Upload Image :</p>
+            <input id="uploadimg" type="file" name="myimage"><br>
+            <button id="mysendbutton" type="submit">Send</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

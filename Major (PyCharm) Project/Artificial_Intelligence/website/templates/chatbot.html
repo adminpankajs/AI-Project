@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+        <div data-aos="fade-down" data-aos-duration="1800" class="test1">
+            <div class="myques">
+            <input id="mychat" type="text" value="Tell bot..." onfocus="this.value=''"><br>
+            <input id="myreply" type="text" value="Bot will answer here !!" onfocus="this.value=''" onfocusout="this.value='Bot will answer here !!'"><br>
+            <button class="mybutton" onclick="myfun()">Command</button>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            function myfun(){
+                var a = document.getElementById('mychat').value;
+                document.getElementById('myreply').value = "listening./././...";
+                var req = new XMLHttpRequest();
+                req.open('GET','chatty/'+a,true);
+                req.send();
+
+                req.onreadystatechange = function(){
+                    if(req.readyState == 4 && req.status == 200){
+                        document.getElementById('myreply').value = req.responseText;
+                    }
+                }
+            }
+        </script>
+{% endblock %}

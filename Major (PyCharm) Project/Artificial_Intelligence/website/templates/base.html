@@ -1,0 +1,46 @@
+{% load static %}
+<html>
+    <head>
+        <title>
+            Artificial Intelligence
+        </title>
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        </head>
+    <body>
+        <div data-aos="fade-right" data-aos-duration="1200" class="nav_bar">
+            <button class="nav_button">
+                <p class="nav_button_text" ><a class="nav_button_text" href="/" >Home</a></p>
+            </button>
+            <button class="nav_button">
+                <p class="nav_button_text" ><a class="nav_button_text" href="/facialrecognition" >Facial Recognition</a></p>
+            </button>
+            <button class="nav_button">
+                <p class="nav_button_text" ><a class="nav_button_text" href="/textextract">Text Recognition</a></p>
+            </button>
+            <button class="nav_button">
+                <p class="nav_button_text" ><a class="nav_button_text" href="/voicerecognition" >Voice Recognition</a></p>
+            </button>
+            <button class="nav_button">
+                <p class="nav_button_text" ><a class="nav_button_text" href="/chatter" >ChatBot</a></p>
+            </button>
+            <button class="nav_button">
+                <p class="nav_button_text" >About us</p>
+            </button>
+            <button style="float: right;" class="nav_button">
+                <p class="nav_button_text" >Join Us</p>
+            </button>
+        </div>
+        <div style="width: 100%; text-align: center;">
+        <p data-aos="fade-up" data-aos-duration="800" class="ai_text" >Artificial Intelligence</p>
+        </div>
+        <img data-aos="zoom-in" data-aos-duration="1500" class="logic_img" src="{% static 'images/logic.gif' %}" alt="error">
+        {% block content %}
+        {% endblock %}
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+            </script>
+    <script src="{% static 'js/myjs.js' %}" ></script>
+    </body>
+</html>

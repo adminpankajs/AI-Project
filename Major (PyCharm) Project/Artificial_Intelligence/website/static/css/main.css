@@ -1,0 +1,174 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.logic_img {
+    width: 60vw;
+    max-width: 650px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -5vh;
+}
+
+.ai_text {
+    font-family: cursive;
+    color: white;
+    /* color: rgb(25, 60, 255); */
+    /* -webkit-text-stroke: 0.1vw rgb(0, 110, 255); */
+    font-size: 3.5vw;
+    margin-top: 5vh;
+}
+
+.nav_bar {
+    color: white;
+}
+
+.float {
+    float: left;
+}
+
+.nav_button {
+    /* width: 6vw; */
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    margin-top: 0px;
+    border: 0px;
+    margin-left: 0.5vw;
+    outline: none;
+    margin-right: 0.5vw;
+    color: turquoise;
+    border-color: black;
+    border-radius: 2vw;
+    background-color: rgb(0, 142, 207);
+    -webkit-transition: padding-right 1s;
+}
+
+.nav_button:hover {
+    padding-right: 5vh;
+    /* transition-property: padding-right 1s; */
+}
+.nav_button:focus {
+    border: none;
+}
+
+.nav_button_text {
+    font-size: 1.25vw;
+    color: white;
+    text-decoration: none;
+}
+
+.myques {
+    margin-top: -50px;
+    width: 25vw;
+    margin: auto;
+    text-align: center;
+}
+
+#mychat {
+    border-radius: 50px;
+    width: 25vw;
+    font-size: 1vw;
+    padding: 1vw;
+}
+
+#myreply {
+    border-radius: 50px;
+    width: 25vw;
+    font-size: 1vw;
+    padding: 1vw;
+}
+
+.mybutton {
+    margin-top: 25px;
+    font-size: 2vw;
+    border-radius: 25px;
+    padding: 10px;
+    color: white;
+    background-color: rgb(0, 137, 190);
+}
+
+* {
+    outline: none;
+}
+
+#mytext {
+    opacity: 0;
+}
+
+#snap {
+    display: flex;
+    position: absolute;
+    text-align: center;
+    font-size: larger;
+
+    padding: 1vw;
+    border: 0.15vw solid black;
+    border-radius: 25px;
+    left: 50%;
+    top: 78%;
+    transform: translate(-50%, -50%);
+}
+
+.video-wrap {
+    display: flex;
+    border: 0.75vw solid white;
+    border-radius: 3vw;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+}
+
+#video {
+    width: 30vw;
+    height: 30vw;
+    border: 5px solid black;
+    border-radius: 2vw;
+}
+
+#processedimg {
+    width: 250px;
+    height: 250px;
+}
+
+#proimg-text {
+    width: 50vw;
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+}
+
+#mydiv {
+    width: 250px;
+    height: 250px;
+    border: 0.5vw solid rgb(54, 44, 44); 
+    padding: 1vw;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.textrecog{
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2vw;
+}
+
+#uploadimg{
+    font-size: 2vw;
+    margin-left: 10vw;
+}
+
+#mysendbutton{
+    font-size: 2vw;
+}
+
+.mymargin{
+
+}

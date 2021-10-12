@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div style="background-color: black;">
+        <div class="video-wrap">
+            <video id="video" playsinline autoplay></video>
+        </div>
+        <form method="POST" action="processimg/" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="controller">
+                <button id="snap" type="submit">Take Snap</button>
+                <input id="mytext" type="text" name="mytext">
+            </div>
+        </form>
+        <canvas id="canvas" width="1000" height="1000"></canvas>
+    </div>
+        <script>
+            'use strict';
+            const video = document.getElementById('video');
+            const canvas = document.getElementById('canvas');
+            const snap = document.getElementById('snap');
+            const errorMsgElement = document.getElementById('spanErrorMsg');
+    
+            var dataURL;
+    
+            const constraints = {
+                audio: false,
+                video:{
+                    width:500, height: 500
+                }
+            };
+    
+            async function init(){
+                try {
+                    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+                    handleSuccess(stream);   
+                } catch (error) {
+                    errorMsgElement.innerHTML = `navigator.getUserMedia.error:${e.toString()}`;
+                }
+            }
+    
+            function handleSuccess(stream){
+                window.stream = stream;
+                video.srcObject = stream;
+            }
+    
+            init();
+    
+            var context = canvas.getContext('2d');
+            snap.addEventListener("click",function(){
+                context.drawImage(video,0,0,250,250);
+                var image = new Image();
+                image = canvas.toDataURL("image/png");
+                console.log(image);
+                document.getElementById("mytext").value = image;
+            });
+        </script>
+{% endblock %}
